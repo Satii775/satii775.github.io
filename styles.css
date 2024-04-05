@@ -2,6 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: row;
+    background-color: bisque;
 }
 
 nav {
@@ -36,4 +37,41 @@ header, footer {
 section {
     margin-left: 200px; /* Adjust based on nav width */
     padding: 20px;
+}
+
+/* gallery */
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+.gallery {
+    width: 400px;
+    display: flex;
+    overflow-x: scroll;
+}
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+.gallery div img {
+    width: 100%;
+    transition: transform 0.5s;
+}
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+#backBtn, #nextBtn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+.gallery div img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
