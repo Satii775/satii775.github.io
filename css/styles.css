@@ -3,14 +3,12 @@ body {
     min-height: 100vh;
     flex-direction: row;
     background-color: bisque;
+    margin: 0; /* Reset default margin */
 }
 
 nav {
     flex: 0 0 200px; /* Adjust width as needed */
     height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
     overflow-y: auto;
 }
 
@@ -28,14 +26,8 @@ nav ul li a {
     border-bottom: 1px solid #ddd; /* Optional */
 }
 
-/* Additional styles for header, sections, and footer */
-header, footer {
-    width: 100%;
-    text-align: center;
-}
-
-section {
-    margin-left: 200px; /* Adjust based on nav width */
+.container {
+    margin-left: 220px; /* Adjust based on nav width and extra space */
     padding: 20px;
 }
 
