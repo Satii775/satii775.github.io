@@ -47,7 +47,7 @@ section {
     margin: 10% auto;
 }
 .gallery {
-    width: 400px;
+    width: 500px;
     display: flex;
     overflow-x: scroll;
 }
