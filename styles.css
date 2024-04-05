@@ -1,46 +1,39 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+nav {
+    flex: 0 0 200px; /* Adjust width as needed */
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0;
 }
 
 nav ul li a {
-    color: #fff;
+    display: block;
+    padding: 10px;
     text-decoration: none;
+    color: #000; /* Adjust color as needed */
+    border-bottom: 1px solid #ddd; /* Optional */
+}
+
+/* Additional styles for header, sections, and footer */
+header, footer {
+    width: 100%;
+    text-align: center;
 }
 
 section {
+    margin-left: 200px; /* Adjust based on nav width */
     padding: 20px;
-}
-
-.project {
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
