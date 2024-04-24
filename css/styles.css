@@ -1,35 +1,75 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: row;
     background-color: bisque;
     margin: 0; /* Reset default margin */
+    overflow-x: hidden;
 }
 
-nav {
-    flex: 0 0 200px; /* Adjust width as needed */
+.nav {
+    width: 350px;
     height: 100vh;
-    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #3333;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-350px);
+    transition: transform 0.2s;
+    overflow: hidden;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.nav-links-container {
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.15);
 }
 
-nav ul li a {
-    display: block;
-    padding: 10px;
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
     text-decoration: none;
-    color: #000; /* Adjust color as needed */
-    border-bottom: 1px solid #ddd; /* Optional */
+    color: #333;
 }
 
-.container {
-    margin-left: 220px; /* Adjust based on nav width and extra space */
-    padding: 20px;
+.nav-link:hover,
+.nav-close:hover {
+    background: rgba(255, 255, 255, 0.15);
 }
+
+.nav-close {
+    background: none;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px 25px;
+    color: #333333;
+    cursor: pointer;
+}
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .main {
+    transform: translateX(350px);
+}
+
+.main {
+    transition: transform 0.2s;
+}
+
+@media (max-width: 500px) {
+    .nav {
+        width: 150px;
+        transform: translateX(-150px);
+    }
+
+    .nav-open .main {
+        transform: translateX(150px);
+    }
+}
+
 
 /* gallery */
 .gallery-wrap {
@@ -38,11 +78,13 @@ nav ul li a {
     justify-content: center;
     margin: 10% auto;
 }
+
 .gallery {
     width: 500px;
     display: flex;
     overflow-x: scroll;
 }
+
 .gallery div {
     width: 100%;
     display: grid;
@@ -51,19 +93,44 @@ nav ul li a {
     padding: 10px;
     flex: none;
 }
+
 .gallery div img {
     width: 100%;
     transition: transform 0.5s;
 }
+
 .gallery::-webkit-scrollbar {
     display: none;
 }
+
 #backBtn, #nextBtn {
     width: 50px;
     cursor: pointer;
     margin: 40px;
 }
+
 .gallery div img:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+@media (max-width: 700px) {
+    .gallery {
+        width: calc(100% - 20px); /* Adjust width to fit within the available space */
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+
+    .gallery div {
+        width: 100%; /* Set width to 100% to fit within the gallery */
+    }
+
+    .gallery div img {
+        width: calc(100% - 20px); /* Adjust image width to fit within the gallery with padding */
+    }
+
+    #backBtn,
+    #nextBtn {
+        margin: 10px auto; /* Adjust margin for better spacing */
+        
+    }
 }
