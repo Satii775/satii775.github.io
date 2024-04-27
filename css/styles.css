@@ -3,6 +3,15 @@ body {
     margin: 0; /* Reset default margin */
     overflow-x: hidden;
 }
+
+.larger-text {
+    size: larger;
+}
+
+.page-div {
+    background-color: rgba(70, 138, 190, 0.694);
+}
+
 p {
     color: #000000;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -137,12 +146,4 @@ p {
         margin: 10px auto; /* Adjust margin for better spacing */
         
     }
-}
-
-.larger-text {
-    size: larger;
-}
-
-.page-div {
-    background-color: rgba(70, 138, 190, 0.694);
 }
