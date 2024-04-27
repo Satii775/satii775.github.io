@@ -142,3 +142,7 @@ p {
 .larger-text {
     size: large;
 }
+
+.page-div {
+    background-color: rgba(70, 138, 190, 0.694);
+}
