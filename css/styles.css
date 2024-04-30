@@ -4,6 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+.contact-links a {
+    color: white;
+}
+
 .larger-text {
     size: larger;
 }
