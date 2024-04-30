@@ -7,6 +7,9 @@ body {
 .contact-links a {
     color: white;
 }
+.contact-links a:hover {
+    color: rgb(185, 185, 185);
+}
 
 .larger-text {
     size: larger;
