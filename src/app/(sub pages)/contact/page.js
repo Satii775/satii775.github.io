@@ -23,9 +23,9 @@ export default function Contact() {
             Collaborate with the Creator
           </h1>
           <p className="text-center font-light text-sm xs:text-base">
-            Enter the digital skyline and share your vision. Whether you're looking to discuss futuristic projects, inquire about 
+            Enter the digital skyline and share your vision. Whether you&apos;re looking to discuss futuristic projects, inquire about 
             collaborations, or just exchange ideas, your messages are the building blocks of creative partnerships. Use the form 
-            below to connect, and let's build the future together.
+            below to connect, and let&apos;s build the future together.
           </p>
         </div>
         <Form />

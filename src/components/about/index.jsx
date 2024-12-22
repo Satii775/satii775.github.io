@@ -21,9 +21,9 @@ const AboutDetails = () => {
           and Unity. Each tool serves as a key to unlocking new dimensions of creativity, enabling me to design visually stunning, 
           interactive spaces that resonate with realism and imagination. <br />
           With programming expertise as my foundation, I integrate functionality and innovation into every creation. 
-          Whether it's scripting interactive experiences, optimizing workflows, or developing tools, my work bridges the 
+          Whether it&apos;s scripting interactive experiences, optimizing workflows, or developing tools, my work bridges the 
           gap between technical precision and artistic vision. <br />
-          Join me as I continue to push the boundaries of what's possible in environmental design, merging art and technology to 
+          Join me as I continue to push the boundaries of what&apos;s possible in environmental design, merging art and technology to 
           construct the architectural landscapes of tomorrow.
           </p>
         </ItemLayout>
