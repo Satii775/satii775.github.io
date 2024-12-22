@@ -12,18 +12,19 @@ const AboutDetails = () => {
           }
         >
           <h2 className="  text-xl md:text-2xl text-left w-full capitalize">
-            Architect of Enchantment
+            Architect of Tomorrow
           </h2>
           <p className="font-light  text-xs sm:text-sm md:text-base   ">
-            My journey in web development is powered by an array of mystical
-            tools and languages, with JavaScript casting the core of my
-            enchantments. I wield frameworks like React.js and Next.js with
-            precision, crafting seamless portals (websites) that connect realms
-            (users) across the digital universe. The ancient arts of the
-            Jamstack empower me to create fast, secure, and dynamic experiences,
-            while my design skills ensure every creation is not only functional
-            but visually captivating. Join me as I continue to explore new
-            spells and technologies to shape the future of the web.
+          My journey in 3D modeling and programming is fueled by a passion for shaping immersive worlds that tell powerful stories. From 
+          the gritty streets of dystopian cities to towering futuristic skyscrapers, I bring visions of the future to life using cutting-edge tools and technologies.
+          I craft these environments with precision and artistry, wielding industry-leading software like Blender, Houdini, Unreal Engine, 
+          and Unity. Each tool serves as a key to unlocking new dimensions of creativity, enabling me to design visually stunning, 
+          interactive spaces that resonate with realism and imagination. <br />
+          With programming expertise as my foundation, I integrate functionality and innovation into every creation. 
+          Whether it's scripting interactive experiences, optimizing workflows, or developing tools, my work bridges the 
+          gap between technical precision and artistic vision. <br />
+          Join me as I continue to push the boundaries of what's possible in environmental design, merging art and technology to 
+          construct the architectural landscapes of tomorrow.
           </p>
         </ItemLayout>
 
@@ -31,7 +32,7 @@ const AboutDetails = () => {
           className={" col-span-full xs:col-span-6 lg:col-span-4 text-accent"}
         >
           <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-            25+ <sub className="font-semibold text-base">clients</sub>
+            4+ <sub className="font-semibold text-base">projects</sub>
           </p>
         </ItemLayout>
 
@@ -39,7 +40,7 @@ const AboutDetails = () => {
           className={"col-span-full xs:col-span-6 lg:col-span-4 text-accent"}
         >
           <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-            4+{" "}
+            3+{" "}
             <sub className="font-semibold text-base">years of experience</sub>
           </p>
         </ItemLayout>
@@ -49,8 +50,8 @@ const AboutDetails = () => {
         >
           <img
             className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
-            alt="CodeBucks"
+            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=Satii775&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
+            alt="Satii"
             loading="lazy"
           />
         </ItemLayout>
@@ -58,8 +59,8 @@ const AboutDetails = () => {
         <ItemLayout className={"col-span-full md:col-span-8 !p-0"}>
           <img
             className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
-            alt="CodeBucks"
+            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api?username=Satii775&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
+            alt="Satii"
             loading="lazy"
           />
         </ItemLayout>
@@ -67,8 +68,8 @@ const AboutDetails = () => {
         <ItemLayout className={"col-span-full"}>
           <img
             className="w-full h-auto"
-            src={`https://skillicons.dev/icons?i=appwrite,aws,babel,bootstrap,cloudflare,css,d3,docker,figma,firebase,gatsby,git,github,graphql,html,ipfs,js,jquery,kubernetes,linux,mongodb,mysql,netlify,nextjs,nodejs,npm,postgres,react,redux,replit,sass,supabase,tailwind,threejs,vercel,vite,vscode,yarn`}
-            alt="CodeBucks"
+            src={`https://skillicons.dev/icons?i=appwrite,aws,bootstrap,css,d3,fgit,github,html,js,jquery,mysql,nextjs,nodejs,npm,react,tailwind,threejs,vercel,vscode`}
+            alt="Satii"
             loading="lazy"
           />
         </ItemLayout>
@@ -76,22 +77,22 @@ const AboutDetails = () => {
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <img
             className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=codebucks27&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
-            alt="CodeBucks"
+            src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=Satii775&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
+            alt="Satii"
             loading="lazy"
           />
         </ItemLayout>
 
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <Link
-            href="https://github.com/codebucks27/Nextjs-contentlayer-blog"
+            href="https://github.com/Satii775/350-Local-Multiplayer-Game.git"
             target="_blank"
             className="w-full"
           >
             <img
               className="w-full h-auto"
-              src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/pin/?username=codebucks27&repo=Nextjs-contentlayer-blog&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=2`}
-              alt="CodeBucks"
+              src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/pin/?username=Satii775&repo=350-Local-Multiplayer-Game&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=2`}
+              alt="Satii"
               loading="lazy"
             />
           </Link>
