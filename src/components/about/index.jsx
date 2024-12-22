@@ -45,7 +45,7 @@ const AboutDetails = () => {
           </p>
         </ItemLayout>
 
-        <ItemLayout
+        {/* <ItemLayout
           className={"col-span-full sm:col-span-6 md:col-span-4 !p-0"}
         >
           <img
@@ -63,7 +63,7 @@ const AboutDetails = () => {
             alt="Satii"
             loading="lazy"
           />
-        </ItemLayout>
+        </ItemLayout> */}
 
         <ItemLayout className={"col-span-full"}>
           <img
@@ -74,16 +74,16 @@ const AboutDetails = () => {
           />
         </ItemLayout>
 
-        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
+        {/* <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <img
             className="w-full h-auto"
             src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=Satii775&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
             alt="Satii"
             loading="lazy"
           />
-        </ItemLayout>
+        </ItemLayout> */}
 
-        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
+        {/* <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <Link
             href="https://github.com/Satii775/350-Local-Multiplayer-Game.git"
             target="_blank"
@@ -96,7 +96,7 @@ const AboutDetails = () => {
               loading="lazy"
             />
           </Link>
-        </ItemLayout>
+        </ItemLayout> */}
       </div>
     </section>
   );
