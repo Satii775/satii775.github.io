@@ -237,7 +237,8 @@
     <script>
         let fearValue = 0;
         let actionsValue = 0;
-        const maxValue = 20; // Maximum value for trackers
+        const maxFearValue = 12; // Maximum value for Fear
+        const maxActionsValue = 20; // Maximum value for Actions
 
         // Initialize abacus displays
         function createAbacus(containerId, maxBeads) {
@@ -283,7 +284,7 @@
 
         function changeFear(delta) {
             const newValue = fearValue + delta;
-            if (newValue >= 0 && newValue <= maxValue) {
+            if (newValue >= 0 && newValue <= maxFearValue) {
                 fearValue = newValue;
                 document.getElementById('fearValue').textContent = fearValue;
                 updateAbacus('fearAbacus', fearValue);
@@ -292,7 +293,7 @@
 
         function changeActions(delta) {
             const newValue = actionsValue + delta;
-            if (newValue >= 0 && newValue <= maxValue) {
+            if (newValue >= 0 && newValue <= maxActionsValue) {
                 actionsValue = newValue;
                 document.getElementById('actionsValue').textContent = actionsValue;
                 updateAbacus('actionsAbacus', actionsValue);
@@ -313,8 +314,8 @@
 
         // Initialize the abacuses on page load
         window.onload = function() {
-            createAbacus('fearAbacus', maxValue);
-            createAbacus('actionsAbacus', maxValue);
+            createAbacus('fearAbacus', maxFearValue);
+            createAbacus('actionsAbacus', maxActionsValue);
             updateAbacus('fearAbacus', fearValue);
             updateAbacus('actionsAbacus', actionsValue);
         };
