@@ -1,301 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="system">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daggerheart DM Tracker</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
-            color: #f4e6d7;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #d4af37;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .trackers {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .tracker-section {
-            background: rgba(212, 175, 55, 0.1);
-            border: 2px solid #d4af37;
-            border-radius: 15px;
-            padding: 25px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-            max-width: 500px;
-            width: 100%;
-        }
-
-        .tracker-title {
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #d4af37;
-        }
-
-        .counter-display {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .counter-value {
-            font-size: 4rem;
-            font-weight: bold;
-            color: #f4e6d7;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            margin-bottom: 10px;
-        }
-
-        .counter-label {
-            font-size: 1.1rem;
-            color: #c4a661;
-        }
-
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .control-btn {
-            background: linear-gradient(145deg, #d4af37, #b8941f);
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1a0f0a;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-
-        .control-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-            background: linear-gradient(145deg, #e6c14a, #d4af37);
-        }
-
-        .control-btn:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .reset-btn {
-            background: linear-gradient(145deg, #8b4513, #654321);
-            color: #f4e6d7;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .reset-btn:hover {
-            background: linear-gradient(145deg, #a0522d, #8b4513);
-            transform: translateY(-1px);
-        }
-
-        .abacus-visual {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            padding: 20px;
-            background: rgba(139, 69, 19, 0.2);
-            border-radius: 10px;
-            border: 1px solid #8b4513;
-        }
-
-        .abacus-row {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            height: 30px;
-        }
-
-        .abacus-bead {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .abacus-bead.active {
-            background: linear-gradient(145deg, #d4af37, #b8941f);
-            transform: scale(1.2);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .abacus-bead.inactive {
-            background: linear-gradient(145deg, #654321, #4a2c17);
-            transform: scale(1);
-        }
-
-        .abacus-label {
-            font-size: 0.9rem;
-            color: #c4a661;
-            margin-right: 10px;
-            width: 40px;
-            text-align: right;
-        }
-
-        @media (max-width: 768px) {
-            .counter-value {
-                font-size: 3rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charlie Bekendam — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Charlie Bekendam — developer, designer, and builder." />
+  <meta name="color-scheme" content="light dark">
 </head>
 <body>
-    <div class="container">
-        <h1>⚔️ Daggerheart DM Tracker ⚔️</h1>
-        
-        <div class="trackers">
-            <!-- Fear Tracker -->
-            <div class="tracker-section">
-                <h2 class="tracker-title">😨 Fear Tracker</h2>
-                
-                <div class="counter-display">
-                    <div class="counter-value" id="fearValue">0</div>
-                    <div class="counter-label">Current Fear</div>
-                </div>
-
-                <div class="abacus-visual" id="fearAbacus">
-                    <!-- Abacus beads will be generated by JavaScript -->
-                </div>
-                
-                <div class="controls">
-                    <button class="control-btn" onclick="changeFear(-1)">−</button>
-                    <button class="control-btn" onclick="changeFear(1)">+</button>
-                </div>
-                
-                <button class="reset-btn" onclick="resetFear()">Reset Fear</button>
-            </div>
+  <a href="#content" class="skip-link">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>Charlie Bekendam</span>
+      </div>
+      <nav aria-label="Primary">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" title="Open menu">☰</button>
+        <ul class="desktop">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="nav-actions">
+            <a class="btn secondary" href="#" download title="Download résumé (replace with your file)">Résumé</a>
+            <button class="theme-toggle" id="themeToggle" aria-pressed="false" title="Toggle theme">🌗 <span class="sr-only">Toggle theme</span></button>
+          </li>
+        </ul>
+        <div id="mobileMenu" role="dialog" aria-label="Mobile Menu">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <a class="btn secondary" href="#" download>Résumé</a>
         </div>
+      </nav>
     </div>
+  </header>
 
-    <script>
-        let fearValue = 0;
-        const maxFearValue = 12; // Maximum value for Fear
+  <main id="content">
+    <!-- HERO -->
+    <section class="container hero section" id="home" data-reveal>
+      <div>
+        <h1>Designer-developer crafting thoughtful apps, games, and 3D worlds.</h1>
+        <p class="lead">I build clean, fast, accessible experiences, from VR and Unity to full-stack web and iOS. Here's a selection of projects that I have been a part of.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn">View Work</a>
+          <a href="#contact" class="btn secondary">Get in Touch</a>
+        </div>
+        <div class="chips" aria-label="Technologies">
+          <span class="badge">Unity</span>
+          <span class="badge">VR/XR</span>
+          <span class="badge">Swift</span>
+          <span class="badge">Blender</span>
+        </div>
+      </div>
+      <div class="hero-media card">
+        <img src="images/IMG_2524.jpg" alt="Picture of Charlie Bekendam" />
+      </div>
+    </section>
 
-        // Initialize abacus displays
-        function createAbacus(containerId, maxBeads) {
-            const container = document.getElementById(containerId);
-            container.innerHTML = '';
-            
-            // Create rows of 5 beads each
-            const rows = Math.ceil(maxBeads / 5);
-            
-            for (let row = 0; row < rows; row++) {
-                const rowDiv = document.createElement('div');
-                rowDiv.className = 'abacus-row';
-                
-                const label = document.createElement('div');
-                label.className = 'abacus-label';
-                label.textContent = `${row * 5 + 1}-${Math.min((row + 1) * 5, maxBeads)}`;
-                rowDiv.appendChild(label);
-                
-                const beadsInRow = Math.min(5, maxBeads - row * 5);
-                for (let bead = 0; bead < beadsInRow; bead++) {
-                    const beadDiv = document.createElement('div');
-                    beadDiv.className = 'abacus-bead inactive';
-                    beadDiv.dataset.value = row * 5 + bead + 1;
-                    rowDiv.appendChild(beadDiv);
-                }
-                
-                container.appendChild(rowDiv);
-            }
-        }
+    <!-- WORK / PROJECTS -->
+    <section class="section" id="work">
+      <div class="container" data-reveal>
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-sub">A handful of things I've designed and built.</p>
+        <div id="projectsGrid" class="grid cols-3"></div>
+      </div>
+    </section>
 
-        function updateAbacus(containerId, currentValue) {
-            const container = document.getElementById(containerId);
-            const beads = container.querySelectorAll('.abacus-bead');
-            
-            beads.forEach((bead, index) => {
-                if (index < currentValue) {
-                    bead.className = 'abacus-bead active';
-                } else {
-                    bead.className = 'abacus-bead inactive';
-                }
-            });
-        }
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about" data-reveal>
+        <div>
+          <div class="avatar" aria-hidden="true">CB</div>
+        </div>
+        <div>
+          <h2 class="section-title">About</h2>
+          <p>Hi! I'm <strong>Charlie Bekendam</strong>. I'm a multidisciplinary developer who loves making great and fun products. I combine a background in interactive media with strong engineering habits to build things that feel great and scale.</p>
+          <p>I care about accessibility, ethical design, and clear documentation. I love to enjoy the outdoors and make things with my friends in my freetime.</p>
+          <div class="chips">
+            <span class="badge">Open to freelance</span>
+            <span class="badge">Available for 2025 roles</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        function changeFear(delta) {
-            const newValue = fearValue + delta;
-            if (newValue >= 0 && newValue <= maxFearValue) {
-                fearValue = newValue;
-                document.getElementById('fearValue').textContent = fearValue;
-                updateAbacus('fearAbacus', fearValue);
-            }
-        }
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container" data-reveal>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-sub">Technologies and tools I use regularly.</p>
+        <div id="skillsList" class="skills"></div>
+      </div>
+    </section>
 
-        function resetFear() {
-            fearValue = 0;
-            document.getElementById('fearValue').textContent = fearValue;
-            updateAbacus('fearAbacus', fearValue);
-        }
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact-grid" data-reveal>
+        <div class="card contact-card">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-sub">Have a role, collaboration, or project in mind? Let's chat.</p>
+          <p><strong>Email:</strong> <a id="emailLink" href="mailto:you@example.com">charlie.bekendam@gmail.com</a> 
+            <button class="btn ghost" id="copyEmail" type="button" title="Copy email">Copy</button></p>
+          <p class="note">I usually reply within 1-2 business days.</p>
+          <div class="social" aria-label="Social links">
+            <a class="icon-btn" href="https://github.com/Satii775" aria-label="GitHub" title="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.16c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.8.42-1.33.76-1.64-2.66-.31-5.46-1.33-5.46-5.9 0-1.3.47-2.36 1.24-3.19-.12-.3-.54-1.55.12-3.23 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.29-1.54 3.3-1.22 3.3-1.22.66 1.68.24 2.93.12 3.23.77.83 1.24 1.89 1.24 3.19 0 4.58-2.8 5.58-5.47 5.88.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0 0 12 .5Z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/charlie-bekendam" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5Zm.02 5.999h-3V21h3V9.5ZM9 9.5H6v11.5h3v-6.2c0-3.44 4-3.72 4 0V21h3v-7.35c0-5.92-6.4-5.7-7.5-2.79V9.5Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        // Initialize the abacus on page load
-        window.onload = function() {
-            createAbacus('fearAbacus', maxFearValue);
-            updateAbacus('fearAbacus', fearValue);
-        };
-
-        // Add keyboard shortcuts
-        document.addEventListener('keydown', function(event) {
-            switch(event.key) {
-                case 'f':
-                case 'F':
-                    if (event.shiftKey) {
-                        changeFear(-1);
-                    } else {
-                        changeFear(1);
-                    }
-                    break;
-                case 'r':
-                case 'R':
-                    if (event.ctrlKey || event.metaKey) {
-                        event.preventDefault();
-                        resetFear();
-                    }
-                    break;
-            }
-        });
-    </script>
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year"></span> Charlie Bekendam. All rights reserved.</span>
+      <a href="#home" class="btn ghost">Back to top ↑</a>
+    </div>
+  </footer>
+  <script src="main.js"></script>
 </body>
 </html>
