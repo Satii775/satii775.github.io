@@ -63,8 +63,8 @@
     // ===== Data-driven Projects & Skills =====
     const projects = [
       {
-        title: 'VR Fly‑Tying Simulator',
-        blurb: 'VR experience with real‑time interaction, haptics, and a guided tutorial system. This is still in progress!',
+        title: 'VR Fly-Tying Simulator',
+        blurb: 'VR experience with real-time interaction, haptics, and a guided tutorial system. This is still in progress!',
         tags: ['Unity', 'XR', 'C#'],
         demo: '#',
         code: '#'
@@ -86,13 +86,11 @@
       {
         title: 'Portfolio Website',
         blurb: 'This site! Accessible, responsive, and framework-free with a bit of JS.',
-        tags: ['HTML', 'CSS', 'JS'],
-        demo: '#',
-        code: '#'
+        tags: ['HTML', 'CSS', 'JS']
       }
     ];
 
-    const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/SwiftUI', 'Unity/C#', 'VR/XR', 'Blender', 'Substance', 'Git', 'Figma', 'Microsoft Products', 'Communication'];
+    const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/SwiftUI', 'Unity/C#', 'VR/XR', 'Blender', 'Substance', 'Git', 'Figma', 'Microsoft Products', 'Communication', 'AI'];
 
     (function renderProjects(){
       const grid = document.getElementById('projectsGrid');
