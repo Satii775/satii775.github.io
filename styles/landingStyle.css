@@ -89,7 +89,7 @@ body{
   text-decoration:none;
   box-shadow: var(--shadow);
 }
-.btn:hover{filter:brightness(.96)}
+.btn:hover{background-color: var(--bg-soft);}
 .btn:active{transform:translateY(1px)}
 .btn--small{padding:.55rem .9rem}
 .btn--full{width:100%}
@@ -102,9 +102,18 @@ body{
 /* Mobile nav button */
 .nav-toggle{
   display:none;
-  background:none; border:0; cursor:pointer;
+  background:none; 
+  border:0; 
+  cursor:pointer;
 }
-.nav-toggle .bar{display:block; width:24px; height:2px; background:#e8f4ff; margin:5px 0; border-radius:1px}
+.nav-toggle .bar{
+    display:block; 
+    width:24px; 
+    height:2px;
+    background:#e8f4ff; 
+    margin:5px 0; 
+    border-radius:1px
+}
 
 /* HERO */
 .hero{
