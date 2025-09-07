@@ -454,3 +454,36 @@
         opacity: 1; 
         transform: translateY(0); 
     }
+
+    /* * Project pages */
+    .project-hero img,
+    .post-hero img { width: 100%; height: auto; display: block; border-radius: 12px; }
+
+    .project-grid { display: grid; grid-template-columns: 280px 1fr; gap: 2rem; }
+    @media (max-width: 900px) { .project-grid { grid-template-columns: 1fr; } }
+
+    .project-aside { position: sticky; top: 1.25rem; align-self: start; }
+    .project-meta { display: grid; gap: 0.75rem; }
+    .project-meta dt { font-weight: 600; color: var(--text-muted); }
+    .project-meta dd { margin: 0; }
+
+    .project-section { margin-block: 2rem; }
+    .caption { font-size: 0.85rem; color: var(--text-muted); padding: 0.5rem 0.75rem; }
+
+    .project-pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; }
+
+    .breadcrumbs { margin-bottom: 1rem; }
+
+    /* Prose defaults (simple) */
+    .prose h2 { margin-top: 1.5rem; }
+    .prose pre { overflow: auto; padding: 1rem; border-radius: 10px; background: var(--surface-muted); }
+    .prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+    /* Lightbox */
+    .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.75); display: grid; place-items: center; padding: 2rem; z-index: 9999; }
+    .lightbox img { max-width: min(1100px, 95vw); max-height: 85vh; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,.3); }
+    .lightbox-close { position: fixed; top: 1rem; right: 1rem; font-size: 1.25rem; background: var(--surface); border: 1px solid var(--border); padding: .5rem .75rem; border-radius: 8px; }
+    .lightbox[hidden] { display: none; }
+
+    /* Utility tweaks */
+    .btn.small { padding: .35rem .6rem; font-size: .9rem; }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devlog — Post Title | Charlie Bekendam</title>
+  <meta name="description" content="Devlog post by Charlie Bekendam." />
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>Charlie Bekendam</span>
+      </div>
+      <nav aria-label="Primary">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" title="Open menu">☰</button>
+        <ul class="desktop">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li class="nav-actions">
+            <a class="btn secondary" href="Charlie Bekendam Resume 9_2025.pdf" download>Résumé</a>
+            <button class="theme-toggle" id="themeToggle" aria-pressed="false" title="Toggle theme">🌗 <span class="sr-only">Toggle theme</span></button>
+          </li>
+        </ul>
+        <div id="mobileMenu" role="dialog" aria-label="Mobile Menu">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn secondary" href="Charlie Bekendam Resume 9_2025.pdf" download>Résumé</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="section">
+      <div class="container" data-reveal>
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+          <a href="index.html#work" class="btn ghost">← Back to Work</a>
+        </nav>
+
+        <header class="post-header">
+          <h1 class="section-title">Devlog Post Title</h1>
+          <p class="section-sub">September 7, 2025 • 5 min read • Tags: <span class="badge">Unreal</span> <span class="badge">Shaders</span></p>
+        </header>
+
+        <figure class="card post-hero">
+          <img src="images/blog/sample/hero.jpg" alt="Hero image for this post">
+        </figure>
+
+        <div class="prose">
+          <h2>Problem</h2>
+          <p>Describe the issue you ran into and why it matters.</p>
+
+          <h2>Approach</h2>
+          <p>Short steps, code snippets, diagrams, and references.</p>
+
+          <pre><code>// example snippet
+float breeze = Noise(WorldPos * 0.1 + Time * 0.5);
+BaseColor *= 0.8 + breeze * 0.2;
+</code></pre>
+
+          <h2>Before / After</h2>
+          <div class="grid cols-2">
+            <figure class="card"><img src="images/blog/sample/before.jpg" alt="Before"><figcaption class="caption">Before</figcaption></figure>
+            <figure class="card"><img src="images/blog/sample/after.jpg" alt="After"><figcaption class="caption">After</figcaption></figure>
+          </div>
+
+          <h2>Notes</h2>
+          <ul>
+            <li>Performance notes and gotchas.</li>
+            <li>Links to related commits or PRs.</li>
+          </ul>
+        </div>
+
+        <nav class="project-pager">
+          <a class="btn ghost" href="post-previous.html">← Previous</a>
+          <a class="btn" href="post-next.html">Next →</a>
+        </nav>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year"></span> Charlie Bekendam. All rights reserved.</span>
+      <a href="#content" class="btn ghost">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

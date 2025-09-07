@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project — Title Here | Charlie Bekendam</title>
+  <meta name="description" content="Case study for Project Title Here by Charlie Bekendam." />
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+
+  <!-- Reuse your header exactly -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>Charlie Bekendam</span>
+      </div>
+      <nav aria-label="Primary">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" title="Open menu">☰</button>
+        <ul class="desktop">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li class="nav-actions">
+            <a class="btn secondary" href="Charlie Bekendam Resume 9_2025.pdf" download>Résumé</a>
+            <button class="theme-toggle" id="themeToggle" aria-pressed="false" title="Toggle theme">🌗 <span class="sr-only">Toggle theme</span></button>
+          </li>
+        </ul>
+        <div id="mobileMenu" role="dialog" aria-label="Mobile Menu">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn secondary" href="Charlie Bekendam Resume 9_2025.pdf" download>Résumé</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- Project Hero -->
+    <section class="section">
+      <div class="container" data-reveal>
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+          <a href="index.html#work" class="btn ghost">← Back to Work</a>
+        </nav>
+
+        <h1 class="section-title">Project Title Here</h1>
+        <p class="section-sub">Short one-liner about the project outcome/value.</p>
+
+        <div class="chips" aria-label="Technologies">
+          <span class="badge">Unity</span>
+          <span class="badge">VR/XR</span>
+          <span class="badge">C#</span>
+          <span class="badge">Blender</span>
+        </div>
+
+        <div class="card project-hero">
+          <img src="images/projects/sample/cover.jpg" alt="Cover image for Project Title Here" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Meta + Summary -->
+    <section class="section">
+      <div class="container project-grid" data-reveal>
+        <aside class="project-aside card">
+          <h2 class="sr-only">Project Details</h2>
+          <dl class="project-meta">
+            <div>
+              <dt>Role</dt><dd>Designer & Developer</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt><dd>Feb 2025 - May 2025</dd>
+            </div>
+            <div>
+              <dt>Team</dt><dd>Solo</dd>
+            </div>
+            <div>
+              <dt>Links</dt>
+              <dd>
+                <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+                <a class="btn small secondary" href="#" target="_blank" rel="noopener">GitHub</a>
+              </dd>
+            </div>
+          </dl>
+        </aside>
+
+        <article class="project-body">
+          <section class="project-section">
+            <h2>Overview</h2>
+            <p>What this is, who it's for, and the result. Keep this tight and outcome-driven.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Goals & Constraints</h2>
+            <ul>
+              <li>Goal: e.g., achieve sub-8ms frame time on mid-range hardware.</li>
+              <li>Constraint: art budget limited to 40 materials / 12 master.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Process</h2>
+            <p>Show how you approached the work. Include prototypes, iterations, code snippets, and reasoning.</p>
+            <div class="grid cols-2">
+              <figure class="card">
+                <img src="images/projects/sample/process-1.jpg" alt="Prototype iteration 1" />
+                <figcaption class="caption">Early blockout for interaction flow.</figcaption>
+              </figure>
+              <figure class="card">
+                <img src="images/projects/sample/process-2.jpg" alt="Prototype iteration 2" />
+                <figcaption class="caption">Material test for stylized look.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2>Gallery</h2>
+            <p class="section-sub">Click any image to view larger.</p>
+            <div class="grid cols-3 lightbox-grid" data-lightbox>
+              <button class="card lightbox-item" data-src="images/projects/sample/shot-1.jpg" title="Open image 1">
+                <img src="images/projects/sample/shot-1_thumb.jpg" alt="Gameplay screenshot 1" />
+              </button>
+              <button class="card lightbox-item" data-src="images/projects/sample/shot-2.jpg" title="Open image 2">
+                <img src="images/projects/sample/shot-2_thumb.jpg" alt="Gameplay screenshot 2" />
+              </button>
+              <button class="card lightbox-item" data-src="images/projects/sample/shot-3.jpg" title="Open image 3">
+                <img src="images/projects/sample/shot-3_thumb.jpg" alt="Gameplay screenshot 3" />
+              </button>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2>Outcomes</h2>
+            <ul>
+              <li>Performance: ~6.5ms @ 1080p on RTX 3060.</li>
+              <li>Shipped a playable demo used by 30+ testers.</li>
+              <li>Documented pipeline reduced asset import time by 40%.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Reflections</h2>
+            <p>What you'd keep, what you'd change, and what you learned.</p>
+          </section>
+
+          <nav class="project-pager">
+            <a class="btn ghost" href="project-previous.html">← Previous</a>
+            <a class="btn" href="project-next.html">Next →</a>
+          </nav>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year"></span> Charlie Bekendam. All rights reserved.</span>
+      <a href="#content" class="btn ghost">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img class="lightbox-img" alt="">
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
