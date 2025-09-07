@@ -66,25 +66,29 @@ const projects = [
     title: 'VR Fly-Tying Simulator',
     blurb: 'VR experience with real-time interaction, haptics, and a guided tutorial system. This is still in progress!',
     tags: ['Unity', 'XR', 'C#'],
-    demo: '#'
+    demo: '#',
+    titleName: 'Dev Page'
   },
   {
     title: 'Accounting App',
     blurb: 'An app that teaches the user accounting. Still in development!',
     tags: ['Swift', 'UIKit'],
-    demo: 'SoloGolfGame.html'
+    demo: 'SoloGolfGame.html',
+    titleName: 'Dev Page'
   },
   {
     title: 'Accessible Checkout App',
     blurb: "An app made in a group of 3. Used Swift and VisionKit to create a checkout-process for BSU GIMM checkout, specifically accessible for someone with Autism.",
     tags: ['Swift', 'UIKit'],
-    demo: 'CheckoutAppProject.html'
+    demo: 'CheckoutAppProject.html',
+    titleName: 'Project Page'
   },
   {
     title: 'Landing Page Website',
     blurb: 'This site! Accessible, responsive, and framework-free with a bit of JS.',
     tags: ['HTML', 'CSS', 'JS'],
-    page: 'landingpage.html'
+    demo: 'landingpage.html',
+    titleName: 'Page'
   }
 ];
 
@@ -103,8 +107,7 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
         <p>${p.blurb}</p>
         <div class="tags">${p.tags.map(t => `<span class="badge">${t}</span>`).join('')}</div>
         <div class="actions">
-          <a class="btn" href="${p.demo}" target="_blank" rel="noreferrer noopener">Live</a>
-          <a class="btn secondary" href="${p.code}" target="_blank" rel="noreferrer noopener">Code</a>
+          <a class="btn" href="${p.demo}" target="_blank" rel="noreferrer noopener">${titleName}</a>
         </div>
       </div>`;
     grid.appendChild(card);

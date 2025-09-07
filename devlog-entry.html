@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devlog — Loading… | Charlie Bekendam</title>
+  <meta name="description" content="Devlog entry by Charlie Bekendam." />
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>Charlie Bekendam</span>
+      </div>
+      <nav aria-label="Primary">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" title="Open menu">☰</button>
+        <ul class="desktop">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li class="nav-actions">
+            <a class="btn secondary" href="Charlie Bekendam Resume 9_2025.pdf" download>Résumé</a>
+            <button class="theme-toggle" id="themeToggle" aria-pressed="false" title="Toggle theme">🌗 <span class="sr-only">Toggle theme</span></button>
+          </li>
+        </ul>
+        <div id="mobileMenu" role="dialog" aria-label="Mobile Menu">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn secondary" href="Charlie Bekendam Resume 9_2025.pdf" download>Résumé</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="section">
+      <div class="container" data-reveal>
+        <nav aria-label="Breadcrumb" class="breadcrumbs" id="breadcrumbs">
+          <!-- * Filled by JS; links back to the project overview -->
+        </nav>
+
+        <header class="post-header">
+          <h1 class="section-title" id="postTitle">Loading…</h1>
+          <p class="section-sub" id="postMeta"></p>
+        </header>
+
+        <figure class="card post-hero" id="postHero" hidden>
+          <img id="postHeroImg" src="" alt="">
+        </figure>
+
+        <div class="prose" id="postBody">
+          <!-- * Filled by JS -->
+        </div>
+
+        <nav class="project-pager" id="postPager" hidden>
+          <!-- * Prev/Next buttons populated by JS -->
+        </nav>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year"></span> Charlie Bekendam. All rights reserved.</span>
+      <a href="#content" class="btn ghost">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="scripts/devlogs.js"></script>
+  <script>
+    // Boot the entry with URL params (?id=...&project=...)
+    window.__BOOT_DEVLOG_ENTRY__ && window.__BOOT_DEVLOG_ENTRY__();
+  </script>
+</body>
+</html>

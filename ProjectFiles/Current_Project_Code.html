@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Devlog — Post Title | Charlie Bekendam</title>
-  <meta name="description" content="Devlog post by Charlie Bekendam." />
+  <title>My Project — Overview & Devlogs | Charlie Bekendam</title>
+  <meta name="description" content="Overview and development updates for My Project by Charlie Bekendam." />
   <meta name="color-scheme" content="light dark">
   <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
 
+  <!-- Header (reuse from index.html) -->
   <header>
     <div class="container nav">
       <div class="brand">
@@ -41,52 +42,74 @@
   </header>
 
   <main id="content">
-    <article class="section">
+    <!-- Project Header -->
+    <section class="section">
       <div class="container" data-reveal>
         <nav aria-label="Breadcrumb" class="breadcrumbs">
           <a href="index.html#work" class="btn ghost">← Back to Work</a>
         </nav>
-
-        <header class="post-header">
-          <h1 class="section-title">Devlog Post Title</h1>
-          <p class="section-sub">September 7, 2025 • 5 min read • Tags: <span class="badge">Unreal</span> <span class="badge">Shaders</span></p>
-        </header>
-
-        <figure class="card post-hero">
-          <img src="images/blog/sample/hero.jpg" alt="Hero image for this post">
-        </figure>
-
-        <div class="prose">
-          <h2>Problem</h2>
-          <p>Describe the issue you ran into and why it matters.</p>
-
-          <h2>Approach</h2>
-          <p>Short steps, code snippets, diagrams, and references.</p>
-
-          <pre><code>// example snippet
-float breeze = Noise(WorldPos * 0.1 + Time * 0.5);
-BaseColor *= 0.8 + breeze * 0.2;
-</code></pre>
-
-          <h2>Before / After</h2>
-          <div class="grid cols-2">
-            <figure class="card"><img src="images/blog/sample/before.jpg" alt="Before"><figcaption class="caption">Before</figcaption></figure>
-            <figure class="card"><img src="images/blog/sample/after.jpg" alt="After"><figcaption class="caption">After</figcaption></figure>
-          </div>
-
-          <h2>Notes</h2>
-          <ul>
-            <li>Performance notes and gotchas.</li>
-            <li>Links to related commits or PRs.</li>
-          </ul>
+        <h1 class="section-title">My Project Title</h1>
+        <p class="section-sub">One‑sentence value prop for this project.</p>
+        <div class="chips" aria-label="Technologies">
+          <span class="badge">Unity</span>
+          <span class="badge">VR/XR</span>
+          <span class="badge">C#</span>
         </div>
-
-        <nav class="project-pager">
-          <a class="btn ghost" href="post-previous.html">← Previous</a>
-          <a class="btn" href="post-next.html">Next →</a>
-        </nav>
+        <div class="card project-hero">
+          <img src="images/projects/myproject/cover.jpg" alt="Cover for My Project" />
+        </div>
       </div>
-    </article>
+    </section>
+
+    <!-- Project Overview + Meta -->
+    <section class="section">
+      <div class="container project-grid" data-reveal>
+        <aside class="project-aside card">
+          <h2 class="sr-only">Project Details</h2>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Designer & Developer</dd></div>
+            <div><dt>Timeline</dt><dd>Jul 2025 – Present</dd></div>
+            <div><dt>Team</dt><dd>Solo</dd></div>
+            <div>
+              <dt>Links</dt>
+              <dd>
+                <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+                <a class="btn small secondary" href="#" target="_blank" rel="noopener">GitHub</a>
+              </dd>
+            </div>
+          </dl>
+        </aside>
+
+        <article class="project-body">
+          <section class="project-section">
+            <h2>Overview</h2>
+            <p>Short description of what the project does, who it’s for, and what makes it interesting. Add 1–2 images or gifs if helpful.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Devlog Updates</h2>
+            <!-- Controls -->
+            <div class="card devlog-controls">
+              <div class="devlog-search">
+                <label for="search" class="sr-only">Search devlogs</label>
+                <input id="search" type="search" placeholder="Search updates (title, text, tags)…" />
+              </div>
+              <div class="devlog-tags" id="tagChips" aria-label="Filter by tag"></div>
+              <div class="devlog-sort">
+                <label for="sort" class="sr-only">Sort</label>
+                <select id="sort">
+                  <option value="newest" selected>Newest first</option>
+                  <option value="oldest">Oldest first</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Devlog list -->
+            <div id="devlogList" class="stack"></div>
+          </section>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -97,5 +120,30 @@ BaseColor *= 0.8 + breeze * 0.2;
   </footer>
 
   <script src="main.js"></script>
+  <script>window.__DEVLOGS__ = {
+    projectSlug: "myproject",
+    // Inline data example (you can swap to external JSON in scripts/devlogs.js)
+    entries: [
+      {
+        id: "2025-09-fast-grass",
+        title: "Fast stylized grass (Unreal, no Niagara)",
+        date: "2025-09-06",
+        tags: ["Unreal","Shaders","Performance"],
+        summary: "World‑aligned noise + vertex bend for breeze without Niagara.",
+        thumb: "images/blog/grass/hero.jpg",
+        url: "devlog-entry.html?id=2025-09-fast-grass&project=myproject"
+      },
+      {
+        id: "2025-08-vr-tying-wraps",
+        title: "VR Fly‑Tying: bobbin wrap feel + anchors",
+        date: "2025-08-29",
+        tags: ["Unity","VR/XR","UX"],
+        summary: "Thread stickiness and stage locking after N turns.",
+        thumb: "images/projects/flytying/thumb.jpg",
+        url: "devlog-entry.html?id=2025-08-vr-tying-wraps&project=myproject"
+      }
+    ]
+  };</script>
+  <script src="scripts/devlogs.js"></script>
 </body>
 </html>
