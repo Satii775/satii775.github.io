@@ -1,4 +1,4 @@
-/* scripts/devlogs.js */
+/* scripts/devlogs.js */ 
 (function(){
   // Footer year
   const y = document.getElementById('year');

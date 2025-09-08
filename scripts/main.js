@@ -96,6 +96,7 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
 
 (function renderProjects(){
   const grid = document.getElementById('projectsGrid');
+  if (!projectsGrid) return;  
   grid.innerHTML = '';
   projects.forEach(p => {
     const card = document.createElement('article');
@@ -116,6 +117,7 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
 
 (function renderSkills(){
   const list = document.getElementById('skillsList');
+  if (!skillsList) return;
   list.innerHTML = skills.map(s => `<span class="skill">${s}</span>`).join('');
 })();
 
