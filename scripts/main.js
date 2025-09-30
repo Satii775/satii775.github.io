@@ -28,6 +28,8 @@
 
   // Toggle button
   const toggle = document.getElementById('themeToggle');
+  if (!toggle) return; // Added safety check
+  
   function current() { return localStorage.getItem(key) || 'system'; }
   function cycle() {
     const next = current() === 'light' ? 'dark' : current() === 'dark' ? 'system' : 'light';
@@ -48,6 +50,8 @@
 (function(){
   const btn = document.getElementById('menuToggle');
   const menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return; // Added safety check
+  
   btn.addEventListener('click', () => {
     const open = menu.getAttribute('data-open') === 'true';
     menu.setAttribute('data-open', String(!open));
@@ -96,7 +100,7 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
 
 (function renderProjects(){
   const grid = document.getElementById('projectsGrid');
-  if (!grid) return;  
+  if (!grid) return; // Fixed: check if grid exists
   grid.innerHTML = '';
   projects.forEach(p => {
     const card = document.createElement('article');
@@ -117,15 +121,16 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
 
 (function renderSkills(){
   const list = document.getElementById('skillsList');
-  if (!list) return;
+  if (!list) return; // Fixed: check if list exists
   list.innerHTML = skills.map(s => `<span class="skill">${s}</span>`).join('');
 })();
 
 // ===== Copy email =====
 (function(){
   const btn = document.getElementById('copyEmail');
-  if (!btn) return;
   const link = document.getElementById('emailLink');
+  if (!btn || !link) return; // Added safety check
+  
   btn.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(link.textContent.trim());
@@ -140,7 +145,6 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
 // ===== Reveal on scroll =====
 (function(){
   const els = document.querySelectorAll('[data-reveal]');
-  if(!els) return;
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
@@ -159,9 +163,12 @@ if (y) y.textContent = new Date().getFullYear();
 // Simple lightbox for any grid with data-lightbox
 (function () {
   const lightbox = document.getElementById('lightbox');
-  if (!lightbox) return;
+  if (!lightbox) return; // Added safety check
+  
   const img = lightbox.querySelector('.lightbox-img');
   const closeBtn = lightbox.querySelector('.lightbox-close');
+  
+  if (!img || !closeBtn) return; // Added safety check
 
   function open(src, alt='') {
     img.src = src;
@@ -174,8 +181,8 @@ if (y) y.textContent = new Date().getFullYear();
     img.src = '';
     document.body.style.overflow = '';
   }
-  closeBtn?.addEventListener('click', close);
-  lightbox?.addEventListener('click', (e) => {
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) close();
   });
   document.addEventListener('keydown', (e) => {
