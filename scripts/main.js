@@ -124,6 +124,7 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
 // ===== Copy email =====
 (function(){
   const btn = document.getElementById('copyEmail');
+  if (!btn) return;
   const link = document.getElementById('emailLink');
   btn.addEventListener('click', async () => {
     try {
@@ -139,6 +140,7 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
 // ===== Reveal on scroll =====
 (function(){
   const els = document.querySelectorAll('[data-reveal]');
+  if(!els) return;
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
