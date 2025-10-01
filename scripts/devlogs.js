@@ -14,26 +14,26 @@
     let current = [...entries];
 
     // Build tag chips
-    const tagChips = document.getElementById('tagChips');
-    const allTags = Array.from(new Set(entries.flatMap(e => e.tags || []))).sort();
-    if (tagChips) {
-      allTags.forEach(tag => {
-        const b = document.createElement('button');
-        b.className = 'chip';
-        b.type = 'button';
-        b.textContent = tag;
-        b.dataset.tag = tag;
-        b.setAttribute('aria-pressed', 'false');
-        tagChips.appendChild(b);
-      });
-      tagChips.addEventListener('click', (e) => {
-        const btn = e.target.closest('.chip');
-        if (!btn) return;
-        const pressed = btn.getAttribute('aria-pressed') === 'true';
-        btn.setAttribute('aria-pressed', String(!pressed));
-        render();
-      });
-    }
+    // const tagChips = document.getElementById('tagChips');
+    // const allTags = Array.from(new Set(entries.flatMap(e => e.tags || []))).sort();
+    // if (tagChips) {
+    //   allTags.forEach(tag => {
+    //     const b = document.createElement('button');
+    //     b.className = 'chip';
+    //     b.type = 'button';
+    //     b.textContent = tag;
+    //     b.dataset.tag = tag;
+    //     b.setAttribute('aria-pressed', 'false');
+    //     tagChips.appendChild(b);
+    //   });
+    //   tagChips.addEventListener('click', (e) => {
+    //     const btn = e.target.closest('.chip');
+    //     if (!btn) return;
+    //     const pressed = btn.getAttribute('aria-pressed') === 'true';
+    //     btn.setAttribute('aria-pressed', String(!pressed));
+    //     render();
+    //   });
+    // }
 
     const search = document.getElementById('search');
     const sort = document.getElementById('sort');

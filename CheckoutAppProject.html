@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Checkout App Project</title>
+  <title>Checkout App</title>
   <meta name="description" content="Case study for Project Title Here by Charlie Bekendam." />
   <meta name="color-scheme" content="light dark">
   <link rel="stylesheet" href="styles/styles.css" />
@@ -49,18 +49,19 @@
           <a href="index.html#work" class="btn ghost">← Back to Work</a>
         </nav>
 
-        <h1 class="section-title">Project Title Here</h1>
-        <p class="section-sub">Short one-liner about the project outcome/value.</p>
+        <h1 class="section-title">Accessible Checkout App</h1>
+        <p class="section-sub">AR-guided navigation system for BSU GIMM equipment checkout, designed for accessibility.</p>
 
         <div class="chips" aria-label="Technologies">
-          <span class="badge">Unity</span>
-          <span class="badge">VR/XR</span>
-          <span class="badge">C#</span>
-          <span class="badge">Blender</span>
+          <span class="badge">Swift</span>
+          <span class="badge">ARKit</span>
+          <span class="badge">RealityKit</span>
+          <span class="badge">VisionKit</span>
+          <span class="badge">SwiftUI</span>
         </div>
 
         <div class="card project-hero">
-          <img src="" alt="Cover image for Project Title Here" />
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/AinCYvlj1hY?si=xiVDl6CNxgAZAVaf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -72,66 +73,79 @@
           <h2 class="sr-only">Project Details</h2>
           <dl class="project-meta">
             <div>
-              <dt>Role</dt><dd>Designer & Developer</dd>
+              <dt>Role</dt><dd>AR Developer</dd>
             </div>
             <div>
               <dt>Timeline</dt><dd>Feb 2025 - May 2025</dd>
             </div>
             <div>
-              <dt>Team</dt><dd>Solo</dd>
+              <dt>Team</dt><dd>3 members</dd>
             </div>
-            <div>
+            <!-- <div>
               <dt>Links</dt>
               <dd>
-                <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
                 <a class="btn small secondary" href="#" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn small secondary" href="#" target="_blank" rel="noopener">Look at the project</a>
               </dd>
-            </div>
+            </div> -->
           </dl>
         </aside>
 
         <article class="project-body">
           <section class="project-section">
             <h2>Overview</h2>
-            <p>What this is, who it's for, and the result. Keep this tight and outcome-driven.</p>
+            <p>The Accessible Checkout App is an AR-powered navigation system designed for the Boise State University GIMM department's equipment checkout process. Built with a team of 3, this app specifically addresses the needs of students with Autism by providing clear visual guidance, audio instructions, and a structured checkout flow.</p>
+            <p>Using ARKit and image recognition, the app guides users through the physical space from the front desk to check-in and check-out stations, making the equipment borrowing process more accessible and less overwhelming.</p>
           </section>
 
           <section class="project-section">
             <h2>Goals & Constraints</h2>
             <ul>
-              <li>Goal: e.g., achieve sub-8ms frame time on mid-range hardware.</li>
-              <li>Constraint: art budget limited to 40 materials / 12 master.</li>
+              <li><strong>Accessibility First:</strong> Design specifically for users with Autism, minimizing sensory overload while providing clear guidance.</li>
+              <li><strong>AR Navigation:</strong> Implement image anchor-based wayfinding with visual path indicators between stations.</li>
+              <li><strong>Equipment Variety:</strong> Support checkout of various tech equipment including VR headsets, cameras, and microphones.</li>
+              <li><strong>Constraint:</strong> Work within the existing GIMM checkout infrastructure and physical space layout.</li>
+              <li><strong>User Testing:</strong> Validate accessibility features with actual users and iterate based on feedback.</li>
             </ul>
           </section>
 
           <section class="project-section">
             <h2>Process</h2>
-            <p>Show how you approached the work. Include prototypes, iterations, code snippets, and reasoning.</p>
-            <div class="grid cols-2">
-              <figure class="card">
-                <img src="" alt="Prototype iteration 1" />
-                <figcaption class="caption">Early blockout for interaction flow.</figcaption>
-              </figure>
-              <figure class="card">
-                <img src="" alt="Prototype iteration 2" />
-                <figcaption class="caption">Material test for stylized look.</figcaption>
-              </figure>
-            </div>
+            <p>The development process focused on creating an intuitive AR experience that reduces cognitive load. We implemented a multi-anchor system using ARKit's image recognition capabilities, where each physical location (front desk, check-in QR station, check-out QR station) has a dedicated AR anchor.</p>
+            
+            <h3>Key Technical Implementations:</h3>
+            <ul>
+              <li><strong>Image Anchor System:</strong> Used ARWorldTrackingConfiguration with custom reference images to create persistent anchors at key locations.</li>
+              <li><strong>Sequential Visibility:</strong> Implemented progressive disclosure where anchors become visible only when needed, preventing overwhelming information.</li>
+              <li><strong>Proximity Menus:</strong> Context-sensitive menus appear when users approach anchors, providing clear next-step options.</li>
+              <li><strong>Path Visualization:</strong> Created visual paths between anchors using RealityKit to guide users through the space.</li>
+              <li><strong>Audio Guidance:</strong> Integrated text-to-speech for accessibility, announcing each step in the process.</li>
+              <li><strong>State Management:</strong> Built a comprehensive checkout flow state machine to handle check-in and check-out processes.</li>
+            </ul>
+            
+            <h3>Accessibility Considerations:</h3>
+            <ul>
+              <li>Clear, high-contrast visual indicators</li>
+              <li>Consistent UI patterns throughout the experience</li>
+              <li>Predictable navigation flow with minimal surprises</li>
+              <li>Audio feedback for all major interactions</li>
+              <li>Option to pause and review instructions at any point</li>
+            </ul>
           </section>
 
-          <section class="project-section">
+           <section class="project-section">
             <h2>Gallery</h2>
             <p class="section-sub">Click any image to view larger.</p>
             <div class="grid cols-3 lightbox-grid" data-lightbox> 
               <!-- ! Add the same src to the data-src when adding photos -->
-              <button class="card lightbox-item" data-src="" title="Open image 1">
-                <img src="" alt="Gameplay screenshot 1" />
+              <button class="card lightbox-item" data-src="images/projects/CheckoutApp/checkoutapppt1.png" title="Open image 1">
+                <img src="images/projects/CheckoutApp/checkoutapppt1.png" alt="Gameplay screenshot 1" />
               </button>
-              <button class="card lightbox-item" data-src="" title="Open image 2">
-                <img src="" alt="Gameplay screenshot 2" />
+              <button class="card lightbox-item" data-src="images/projects/CheckoutApp/checkoutapppt2.png" title="Open image 2">
+                <img src="images/projects/CheckoutApp/checkoutapppt2.png" alt="Gameplay screenshot 2" />
               </button>
-              <button class="card lightbox-item" data-src="" title="Open image 3">
-                <img src="" alt="Gameplay screenshot 3" />
+              <button class="card lightbox-item" data-src="images/projects/CheckoutApp/checkoutapppt3.png" title="Open image 3">
+                <img src="images/projects/CheckoutApp/checkoutapppt3.png" alt="Gameplay screenshot 3" />
               </button>
             </div>
           </section>
@@ -139,15 +153,23 @@
           <section class="project-section">
             <h2>Outcomes</h2>
             <ul>
-              <li>Performance: ~6.5ms @ 1080p on RTX 3060.</li>
-              <li>Shipped a playable demo used by 30+ testers.</li>
-              <li>Documented pipeline reduced asset import time by 40%.</li>
+              <li><strong>Successful AR Navigation:</strong> Implemented a working 4-anchor system with image recognition and path visualization.</li>
+              <li><strong>Accessibility Features:</strong> Integrated audio guidance, proximity-based menus, and clear visual indicators specifically designed for users with Autism.</li>
+              <li><strong>Equipment Management:</strong> Built support for checking out various tech equipment including VR headsets, microphones, and cameras.</li>
+              <li><strong>Persistence System:</strong> Implemented AR world map saving/loading to maintain anchor positions across sessions.</li>
+              <li><strong>Team Collaboration:</strong> Successfully coordinated with 2 teammates to deliver a functional prototype within the semester timeline.</li>
             </ul>
           </section>
 
           <section class="project-section">
             <h2>Reflections</h2>
-            <p>What you'd keep, what you'd change, and what you learned.</p>
+            <p><strong>What Worked Well:</strong> The image anchor approach proved very effective for indoor navigation. The sequential visibility system helped reduce cognitive overload by showing users only relevant information for their current step. Audio guidance was particularly successful in providing reassurance without requiring constant visual attention.</p>
+            
+            <p><strong>Challenges:</strong> Managing AR session persistence was more complex than anticipated. We needed to implement robust error handling for cases where image anchors weren't immediately detected. Balancing the information displayed in proximity menus while keeping them accessible required multiple iterations.</p>
+            
+            <p><strong>Future Improvements:</strong> With more time, I would add haptic feedback for approaching anchors, implement a practice mode for first-time users, and expand the system to handle equipment return documentation with photo capture. User testing with individuals with Autism would provide invaluable feedback for refining the accessibility features.</p>
+            
+            <p><strong>Key Learnings:</strong> This project deepened my understanding of ARKit's capabilities, particularly around world tracking and image recognition. I learned the importance of designing for specific user needs rather than general audiences, and how small UX details can significantly impact accessibility. Working in a team of 3 on an AR project taught me valuable lessons about coordinating development when testing requires physical space and specific conditions.</p>
           </section>
 
           <nav class="project-pager">
@@ -162,7 +184,7 @@
   <footer>
     <div class="container foot">
       <span>© <span id="year"></span> Charlie Bekendam. All rights reserved.</span>
-      <a href="#content" class="btn ghost">Back to top ↑</a>
+      <a href="#content" class="btn ghost">Back to top →</a>
     </div>
   </footer>
 
