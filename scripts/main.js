@@ -70,11 +70,11 @@ const projects = [
     title: 'VR Fly-Tying Simulator',
     blurb: 'VR experience with real-time interaction, haptics, and a guided tutorial system. This is still in progress!',
     tags: ['Unity', 'XR', 'C#'],
-    demo: '#',
+    demo: 'flyTyingProject.html',
     titleName: 'Dev Page'
   },
   {
-    title: 'Accounting App',
+    title: 'Golf Game',
     blurb: 'An app that teaches the user accounting. Still in development!',
     tags: ['Swift', 'UIKit'],
     demo: 'SoloGolfGame.html',
@@ -89,7 +89,14 @@ const projects = [
   },
   {
     title: 'Landing Page Website',
-    blurb: 'This site! Accessible, responsive, and framework-free with a bit of JS.',
+    blurb: 'Website landing page for Charity: Water. Made for an assignment in my GCA program.',
+    tags: ['HTML', 'CSS', 'JS'],
+    demo: 'landingpage.html',
+    titleName: 'Page'
+  },
+  {
+    title: 'Accounting Learning App',
+    blurb: 'An app that teaches the user accounting. Still in development!',
     tags: ['HTML', 'CSS', 'JS'],
     demo: 'landingpage.html',
     titleName: 'Page'

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VR Fly Tying</title>
+  <meta name="description" content="Case study for Project Title Here by Charlie Bekendam." />
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+
+  <!-- ? Reuse the header exactly -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>Charlie Bekendam</span>
+      </div>
+      <nav aria-label="Primary">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" title="Open menu">☰</button>
+        <ul class="desktop">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li class="nav-actions">
+            <a class="btn secondary" href="Charlie Bekendam Resume 9_2025.pdf" download>Résumé</a>
+            <button class="theme-toggle" id="themeToggle" aria-pressed="false" title="Toggle theme">🌗 <span class="sr-only">Toggle theme</span></button>
+          </li>
+        </ul>
+        <div id="mobileMenu" role="dialog" aria-label="Mobile Menu">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn secondary" href="Charlie Bekendam Resume 9_2025.pdf" download>Résumé</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- Project Hero -->
+    <section class="section">
+      <div class="container" data-reveal>
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+          <a href="index.html#work" class="btn ghost">← Back to Work</a>
+        </nav>
+
+        <h1 class="section-title">VR Fly Tying Project</h1>
+        <p class="section-sub">Immersive VR experience teaching the art of fly tying with realistic physics and interactive tutorials.</p>
+
+        <div class="chips" aria-label="Technologies">
+          <span class="badge">Unity</span>
+          <span class="badge">XR Interaction Toolkit</span>
+          <span class="badge">C#</span>
+          <span class="badge">LMMS</span>
+          <span class="badge">Blender</span>
+        </div>
+
+        <div class="card project-hero">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+            <iframe 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+              src="https://www.youtube.com/embed/1VwToqhNcMw?si=wuFuSa5lkQAA3kqD" 
+              title="Fly Tying Projcet" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meta + Summary -->
+    <section class="section">
+      <div class="container project-grid" data-reveal>
+        <aside class="project-aside card">
+          <h2 class="sr-only">Project Details</h2>
+          <dl class="project-meta">
+            <div>
+              <dt>Role</dt><dd>AR Developer</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt><dd>Spring 2025 (In Progress)</dd>
+            </div>
+            <div>
+              <dt>Team</dt><dd>3 members</dd>
+            </div>
+            <!-- <div>
+              <dt>Links</dt>
+              <dd>
+                <a class="btn small secondary" href="#" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn small secondary" href="#" target="_blank" rel="noopener">Look at the project</a>
+              </dd>
+            </div> -->
+          </dl>
+        </aside>
+
+        <article class="project-body">
+          <section class="project-section">
+            <h2>Overview</h2>
+            <p>The VR Fly Tying Simulator is an immersive virtual reality experience that teaches users the traditional craft of fly tying for fishing. Using realistic physics and haptic feedback, players learn to wrap thread, attach materials, and create their own fishing flies in a relaxing, meditative environment.</p>
+            <p>This project combines technical VR development challenges with the goal of preserving and teaching a traditional skill in an accessible, engaging format. The simulator provides a safe, low-pressure learning environment where mistakes are part of the learning process.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Goals & Constraints</h2>
+            <ul>
+              <li><strong>Realistic Thread Physics:</strong> Implement thread behavior that accurately mimics real fly tying, including tension, breaking points, and natural hanging.</li>
+              <li><strong>Intuitive VR Interaction:</strong> Design controls that feel natural for VR users while maintaining the precision required for detailed fly tying work.</li>
+              <li><strong>Progressive Tutorial System:</strong> Create a guided learning experience that teaches techniques step-by-step without overwhelming beginners.</li>
+              <li><strong>Immersive Audio:</strong> Develop a comprehensive audio system with ambient river sounds, music stems, and realistic tool sounds.</li>
+              <li><strong>Performance Target:</strong> Maintain smooth frame rates for VR comfort (90fps minimum) while rendering detailed thread physics.</li>
+              <li><strong>Constraint:</strong> Solo development requiring careful scope management and prioritization of core mechanics over expansive content.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Process</h2>
+            <p>The heart of the project is the bobbin tool system, which required solving several technical challenges.</p>
+            <h2>Core Mechanics Development: </h2>
+
+            <h3>Thread System Implementation:</h3>
+            <ul>
+              <li>Built a custom line renderer system that visualizes thread in real-time as players wrap it around the hook.</li>
+              <li>Implemented rotation tracking to calculate accumulated thread wraps.</li>
+              <li>Created a progressive warning system where thread changes from white -> yellow (warning) -> red (danger) before breaking.</li>
+              <li>Added distance-based tension mechanics that trigger thread breaking if pulled too far from the anchor point.</li>
+              <li>Developed thread hanging physics so released thread naturally drapes under the hook like real material.</li>
+              <li>Built a comprehensive checkout flow state machine to handle check-in and check-out processes.</li>
+            </ul>
+            
+            <h3>VR Interaction Design:</h3>
+            <ul>
+              <li>Integrated Unity's XR Interaction Toolkit for grab interactions.</li>
+              <li>Implemented precise hand tracking for the fine motor control required in fly tying.</li>
+              <li>Added haptic feedback pulses when thread reaches warning thresholds.</li>
+              <li>Created a reset mechanism where players must "rethread" the bobbin after breaking thread, adding realistic consequences.</li>
+            </ul>
+
+            <h3>Audio System Architecture:</h3>
+            <p>To meet project requirements and enhance immersion, I built a comprehensive Unity Audio Mixer with:</p>
+            <ul>
+              <li>Three clearly labeled groups: Music, Ambient, and Sound Effects.</li>
+              <li>Five+ snapshots representing different game states (Tutorial Mode, Focus Mode, Achievement, Menu, Default).</li>
+              <li>Zone-triggered snapshots (riverside area changes audio mix to emphasize water sounds).</li>
+              <li>Game logic-triggered snapshots (thread breaking, fly completion).</li>
+              <li>Five musical stems exported from LMMS and routed through the mixer.</li>
+              <li>Ambient river sounds placed in the 3D world space.</li>
+              <li>Unity Reverb Zones in the workshop area for spatial audio depth.</li>
+              <li>Thread snap sound effects and tool interaction audio.</li>
+            </ul>
+          </section>
+
+           <section class="project-section">
+            <h2>Gallery</h2>
+            <p class="section-sub">Click any image to view larger.</p>
+            <div class="grid cols-3 lightbox-grid" data-lightbox> 
+              <!-- ! Add the same src to the data-src when adding photos -->
+              <button class="card lightbox-item" data-src="images/projects/FlyTying/flytyingpt1.png" title="Open image 1">
+                <img src="images/projects/FlyTying/flytyingpt1.png" alt="Gameplay screenshot 1" />
+              </button>
+              <button class="card lightbox-item" data-src="images/projects/FlyTying/flytyingpt2.png" title="Open image 2">
+                <img src="images/projects/FlyTying/flytyingpt2.png" alt="Gameplay screenshot 2" />
+              </button>
+              <button class="card lightbox-item" data-src="images/projects/FlyTying/flytyingpt3.png" title="Open image 3">
+                <img src="images/projects/FlyTying/flytyingpt3.png" alt="Gameplay screenshot 3" />
+              </button>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2>Outcomes</h2>
+            <ul>
+              <li><strong>Functional Bobbin System:</strong> Successfully implemented thread wrapping with realistic physics, tension mechanics, and breaking behavior.</li>
+              <li><strong>Progressive Warning System:</strong> Visual and audio feedback clearly communicates thread state to prevent frustrating breaks.</li>
+              <li><strong>Comprehensive Audio Design:</strong> Five musical stems, ambient sounds, reverb zones, and multiple snapshots create an immersive soundscape.</li>
+              <li><strong>VR Interaction Polish:</strong> Natural grab interactions with haptic feedback make the virtual tools feel tangible.</li>
+              <li><strong>Educational Foundation:</strong> Core mechanics are in place to support future tutorial content teaching actual fly tying techniques.</li>
+              <li><strong>Active Development:</strong> Project is ongoing with plans for additional tools, materials, and guided tutorials.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Reflections</h2>
+            <p><strong>What Worked Well:</strong> The thread physics system exceeded my expectations. The progressive color warning system (white -> yellow -> red) provides clear feedback without breaking immersion, and the thread hanging behavior when released adds a satisfying level of realism. The audio mixer setup with multiple snapshots creates a rich, dynamic soundscape that responds naturally to player actions.</p>
+            
+            <p><strong>Challenges:</strong> Balancing realism with playability required many iterations. Real fly tying demands extreme precision, but VR hand tracking has inherent jitter. I had to find the sweet spot where the mechanics feel realistic without being frustratingly difficult. Managing thread state across different game events (grabbing, releasing, breaking, resetting) required careful state machine design to prevent bugs.</p>
+            
+            <p><strong>Future Improvements:</strong> This project deepened my understanding of VR interaction design, particularly around precision tasks that require steady hand control. I learned the importance of providing multiple forms of feedback (visual, audio, haptic) to compensate for the lack of physical touch in VR. Working solo on a VR project taught me to be strategic about scope and focus on polishing core mechanics before adding features. The audio work with LMMS and Unity's mixer system gave me valuable experience in creating layered, dynamic soundscapes that enhance rather than distract from gameplay.</p>
+            
+            <p><strong>Personal Note:</strong> As someone interested in both traditional crafts and emerging technology, this project represents the intersection of those passions. Fly tying is a meditative, detail-oriented craft that's typically taught in person. Creating a VR version that can teach these skills to anyone with a headset feels like preserving and democratizing traditional knowledge in an exciting way.</p>
+          </section>
+
+          <nav class="project-pager">
+            <a class="btn ghost" href="project-previous.html">← Previous</a>
+            <a class="btn" href="project-next.html">Next →</a>
+          </nav>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year"></span> Charlie Bekendam. All rights reserved.</span>
+      <a href="#content" class="btn ghost">Back to top →</a>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img class="" alt="">
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
