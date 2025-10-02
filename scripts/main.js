@@ -71,35 +71,40 @@ const projects = [
     blurb: 'VR experience with real-time interaction, haptics, and a guided tutorial system. This is still in progress!',
     tags: ['Unity', 'XR', 'C#'],
     demo: 'flyTyingProject.html',
-    titleName: 'Dev Page'
-  },
+    titleName: 'Dev Page',
+    image: 'images/projects/FlyTying/flytyingpreview.png'
+    },
   {
     title: 'Golf Game',
     blurb: 'An app that teaches the user accounting. Still in development!',
     tags: ['Swift', 'UIKit'],
     demo: 'SoloGolfGame.html',
-    titleName: 'Dev Page'
+    titleName: 'Dev Page',
+    image: 'images/projects/GolfGame/GolfGame_Characters_Concept.png'
   },
   {
     title: 'Accessible Checkout App',
     blurb: "An app made in a group of 3. Used Swift and VisionKit to create a checkout-process for BSU GIMM checkout, specifically accessible for someone with Autism.",
     tags: ['Swift', 'UIKit'],
     demo: 'CheckoutAppProject.html',
-    titleName: 'Project Page'
+    titleName: 'Project Page',
+    image: 'images/projects/CheckoutApp/checkoutapppreview.png'
   },
   {
     title: 'Landing Page Website',
     blurb: 'Website landing page for Charity: Water. Made for an assignment in my GCA program.',
     tags: ['HTML', 'CSS', 'JS'],
     demo: 'landingpage.html',
-    titleName: 'Page'
+    titleName: 'Page',
+    image: 'images/projects/CareerAccel/charity_water_preview.png'
   },
   {
     title: 'Accounting Learning App',
     blurb: 'An app that teaches the user accounting. Still in development!',
     tags: ['HTML', 'CSS', 'JS'],
     demo: 'landingpage.html',
-    titleName: 'Page'
+    titleName: 'Page',
+    image: ''
   }
 ];
 
@@ -113,7 +118,9 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
     const card = document.createElement('article');
     card.className = 'card project';
     card.innerHTML = `
-      <div class="thumb">Preview image</div>
+      <div class="thumb">
+        <img src="${p.image}" alt="Preview Image" />
+      </div>
       <div class="body">
         <h3>${p.title}</h3>
         <p>${p.blurb}</p>

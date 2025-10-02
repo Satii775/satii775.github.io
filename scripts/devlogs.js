@@ -89,6 +89,13 @@
     }
 
     render();
+  } else if (listEl) {
+    //wait for data to load
+    window.addEventListener('devlogsReady', () => {
+      if (window.__DEVLOGS__) {
+        const { entries = [], projectSlug } = window.__DEVLOGS__;
+      }
+    })
   }
 
   // ---- Devlog entry page: load one entry by URL param ----
@@ -117,12 +124,17 @@
     let entries = (window.__DEVLOGS__ && window.__DEVLOGS__.entries) || [];
 
     // Optional: if you want external JSON per project, uncomment and set the path below
-    // if (entries.length === 0) {
-    //   try {
-    //     const res = await fetch(`data/devlogs-${project}.json`);
-    //     if (res.ok) entries = await res.json();
-    //   } catch (e) { /* ignore */ }
-    // }
+    if (entries.length === 0 && project) {
+      try {
+        const res = await fetch(`data/devlogs-${project}.json`);
+        if (res.ok){
+          entries = await res.json();
+        } 
+        else {
+          console.error('Cound not load devlog dat:', res.status);
+        }
+      } catch (e) { console.error('Error fetching devlog data:', e)}
+    }
 
     const entry = entries.find(e => e.id === id);
     if (!entry) {
@@ -131,7 +143,7 @@
       return;
     }
 
-    document.title = `Devlog — ${entry.title} | Charlie Bekendam`;
+    document.title = `Devlog — ${entry.title}`;
     $('#postTitle').textContent = entry.title;
     $('#postMeta').innerHTML = `${new Date(entry.date).toLocaleDateString()}${entry.tags && entry.tags.length ? ' • ' + entry.tags.map(t=>`<span class="badge">${t}</span>`).join(' ') : ''}`;
 
