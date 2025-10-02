@@ -119,7 +119,7 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
     card.className = 'card project';
     card.innerHTML = `
       <div class="thumb">
-        <img src="${p.image}" alt="Preview Image" />
+        <img src="${p.image}" alt="Preview Image" class="projectPreview" />
       </div>
       <div class="body">
         <h3>${p.title}</h3>

@@ -355,6 +355,11 @@
         flex-wrap: wrap; 
     }
 
+    .projectPreview img {
+        height: 300px;
+        width: 100%;
+    }
+
     .section-title { 
         font-size: clamp(1.4rem, 3vw, 2rem); 
         margin: 0 0 .6rem 0; 
