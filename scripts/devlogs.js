@@ -113,8 +113,16 @@
   function setBreadcrumb(project){
     const bc = document.getElementById('breadcrumbs');
     if (!bc) return;
+
+    // Map project slugs to their actual HTML files
+    const projectFiles = {
+      'golfgame': 'SoloGolfGame.html',
+      'accountingapp': 'AccountingApp.html',
+      'checkoutapp': 'CheckoutAppProject.html'
+    };
+
     const link = document.createElement('a');
-    link.href = `project-${project||'myproject'}.html`;
+    link.href = projectFiles[project] || `project-${project||'myproject'}.html`;
     link.className = 'btn ghost';
     link.textContent = '← Back to Project';
     bc.innerHTML = '';
