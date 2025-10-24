@@ -102,7 +102,7 @@ const projects = [
     title: 'Accounting Learning App',
     blurb: 'An app that teaches the user accounting. Still in development!',
     tags: ['HTML', 'CSS', 'JS'],
-    demo: 'landingpage.html',
+    demo: 'AccountingApp.html',
     titleName: 'Page',
     image: ''
   }
