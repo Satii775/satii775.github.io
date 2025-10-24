@@ -1,0 +1,35 @@
+[
+    {
+    "id": "2025-07-accounting-concept",
+    "title": "Accounting App: Initial Concept",
+    "date": "2025-07-15",
+    "tags": ["Design","Concept","Education"],
+    "summary": "Brainstorming a Duolingo-style app to make learning accounting fun and accessible.",
+    "thumb": "images/projects/AccountingApp/AccountingAppHomePage.jpg",
+    "hero": "images/projects/AccountingApp/AccountingAppHomePage.jpg",
+    "url": "devlog-entry.html?id=2025-07-accounting-concept&project=accountingapp",
+    "html": "<h2>Idea</h2><p>Learning accounting can be intimidating and boring. I wanted to create an app that makes it engaging and fun, similar to how Duolingo teaches languages.</p><h2>Approach</h2><p>Using gamification, bite-sized lessons, and interactive exercises to teach accounting fundamentals.</p><h2>Notes</h2><ul><li>Focus on core accounting principles.</li><li>Keep lessons short and engaging.</li><li>Include real-world examples.</li></ul>"
+},
+{
+    "id": "2025-08-accounting-ui",
+    "title": "Accounting App: UI Design & Flow",
+    "date": "2025-08-10",
+    "tags": ["UI/UX","Design","Swift"],
+    "summary": "Designed the user interface and lesson flow for the accounting learning experience.",
+    "thumb": "images/projects/AccountingApp/AccountingAppHomePage.jpg",
+    "hero": "images/projects/AccountingApp/AccountingAppHomePage.jpg",
+    "url": "devlog-entry.html?id=2025-08-accounting-ui&project=accountingapp",
+    "html": "<h2>Overview</h2><p>Created a clean, intuitive interface that guides users through accounting concepts progressively.</p><h2>Process</h2><p>Designed in Figma first, focusing on simplicity and clarity. Used familiar patterns from educational apps to reduce learning curve.</p><h2>Features</h2><ul><li>Progress tracking dashboard.</li><li>Interactive quizzes and exercises.</li><li>Achievement system for motivation.</li></ul>"
+},
+{
+    "id": "2025-09-accounting-development",
+    "title": "Accounting App: Development Progress",
+    "date": "2025-09-20",
+    "tags": ["Swift","Development","iOS"],
+    "summary": "Building the core functionality using Swift and UIKit, implementing the lesson system.",
+    "thumb": "images/projects/AccountingApp/AccountingAppHomePage.jpg",
+    "hero": "images/projects/AccountingApp/AccountingAppHomePage.jpg",
+    "url": "devlog-entry.html?id=2025-09-accounting-development&project=accountingapp",
+    "html": "<h2>Development</h2><p>Started implementing the app in Swift using UIKit. Built the lesson progression system and quiz functionality.</p><h2>Challenges</h2><p>Balancing educational content with engaging interactions. Making complex accounting concepts simple enough for beginners.</p><h2>Next Steps</h2><ul><li>Add more lesson content.</li><li>Implement user authentication.</li><li>Create progress tracking backend.</li></ul>"
+}
+]
