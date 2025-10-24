@@ -9,7 +9,10 @@
 
   // ---- Project page: list rendering + controls ----
   const listEl = document.getElementById('devlogList');
-  if (listEl && window.__DEVLOGS__) {
+
+  function initDevlogs() {
+    if (!listEl || !window.__DEVLOGS__) return;
+
     const { entries = [], projectSlug } = window.__DEVLOGS__;
     let current = [...entries];
 
@@ -89,13 +92,16 @@
     }
 
     render();
-  } else if (listEl) {
-    //wait for data to load
-    window.addEventListener('devlogsReady', () => {
-      if (window.__DEVLOGS__) {
-        const { entries = [], projectSlug } = window.__DEVLOGS__;
-      }
-    })
+  }
+
+  if (listEl) {
+    if (window.__DEVLOGS__) {
+      // Data already loaded, initialize immediately
+      initDevlogs();
+    } else {
+      // Wait for data to load
+      window.addEventListener('devlogsReady', initDevlogs);
+    }
   }
 
   // ---- Devlog entry page: load one entry by URL param ----
