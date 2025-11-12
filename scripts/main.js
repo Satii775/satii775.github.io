@@ -126,7 +126,7 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node.js', 'Swift/Swi
         <p>${p.blurb}</p>
         <div class="tags">${p.tags.map(t => `<span class="badge">${t}</span>`).join('')}</div>
         <div class="actions">
-          <a class="btn" href="${p.demo}" target="_blank" rel="noreferrer noopener">${p.titleName}</a>
+          <a class="btn" href="${p.demo}" rel="noreferrer noopener">${p.titleName}</a>
         </div>
       </div>`;
     grid.appendChild(card);
