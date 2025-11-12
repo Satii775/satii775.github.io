@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Charlie Bekendam</title>
+  <meta name="description" content="Resume for Charlie Bekendam, student at Boise State University studying Games, Interactive Media, and Mobile Development." />
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="styles/styles.css" />
+  <style>
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .resume-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .resume-header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .resume-header .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .resume-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+    .resume-contact a {
+      color: var(--primary);
+    }
+    .resume-section {
+      margin-bottom: 2.5rem;
+    }
+    .resume-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      color: var(--text);
+    }
+    .resume-item {
+      margin-bottom: 1.5rem;
+    }
+    .resume-item h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--text);
+    }
+    .resume-item .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+    .resume-item p, .resume-item ul {
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .resume-item ul {
+      margin-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .skill-bar {
+      margin-bottom: 1rem;
+    }
+    .skill-bar-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .skill-bar-bg {
+      height: 8px;
+      background: var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 999px;
+      transition: width 0.6s ease;
+    }
+    .references {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .reference-card {
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .reference-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .reference-card .title {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .reference-card a {
+      font-size: 0.9rem;
+      display: block;
+      margin-top: 0.25rem;
+    }
+    .hobbies-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .hobbies-list .badge {
+      padding: 0.5rem 1rem;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      .resume-header h1 {
+        font-size: 2rem;
+      }
+      .resume-contact {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>Charlie Bekendam</span>
+      </div>
+      <nav aria-label="Primary">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" title="Open menu">☰</button>
+        <ul class="desktop">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li class="nav-actions">
+            <a class="btn secondary" href="resume.html">Résumé</a>
+            <button class="theme-toggle" id="themeToggle" aria-pressed="false" title="Toggle theme">🌗 <span class="sr-only">Toggle theme</span></button>
+          </li>
+        </ul>
+        <div id="mobileMenu" role="dialog" aria-label="Mobile Menu">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn secondary" href="resume.html">Résumé</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section">
+      <div class="container resume-container" data-reveal>
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+          <a href="index.html" class="btn ghost">← Back to Home</a>
+        </nav>
+
+        <div class="resume-header">
+          <h1>Charlie Bekendam</h1>
+          <p class="subtitle">Student at Boise State University</p>
+          <div class="resume-contact">
+            <span>📞 208-867-1083</span>
+            <span>✉️ <a href="mailto:charlie.bekendam@gmail.com">charlie.bekendam@gmail.com</a></span>
+            <span>🌐 <a href="https://satii775.github.io" target="_blank">Satii775.github.io</a></span>
+            <span>💼 <a href="https://linkedin.com/in/charlie-bekendam" target="_blank">LinkedIn</a></span>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Education</h2>
+          <div class="resume-item">
+            <h3>Boise State University</h3>
+            <p class="meta">August 2022 – Fall 2027</p>
+            <p>Bachelor's Degree in Games, Interactive Media, and Mobile Development (GIMM)</p>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Technical Experience</h2>
+
+          <div class="resume-item">
+            <h3>Global Career Accelerator - Internship</h3>
+            <p class="meta">August 2025 – December 2025</p>
+            <p>I worked in small teams to get experience in Web Development, Data Visualization, AI Implementation and integration, and prototyping projects.</p>
+          </div>
+
+          <div class="resume-item">
+            <h3>Autism Accessibility Checkout App as iOS Developer</h3>
+            <p class="meta">January 2025 – May 2025</p>
+            <p>3-person development team. Used ARKit and Swift with an image detection system, and persistence with AR, also worked on UI/UX. Design for making Checking out at Boise State more manageable for someone with a high-level of Autism.</p>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Skills</h2>
+
+          <div class="skills-grid">
+            <div>
+              <div class="skill-bar">
+                <div class="skill-bar-label">
+                  <span>Adaptation</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar-label">
+                  <span>Software Tools</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 85%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar-label">
+                  <span>Communication</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="skill-bar">
+                <div class="skill-bar-label">
+                  <span>Github</span>
+                  <span>75%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 75%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar-label">
+                  <span>3D Modeling & Design</span>
+                  <span>65%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Coding and Tools</h2>
+          <div class="resume-item">
+            <p>Very knowledgeable in C#, C++, JavaScript, HTML, CSS, Swift. Quick to learning new languages. Experience with Microsoft products and Adobe products.</p>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Relevant Coursework</h2>
+          <div class="resume-item">
+            <p>ITM 370 - AI Implementation, GIMM 310 - iOS Development, GIMM 400 - Networked Multiplayer.</p>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Hobbies</h2>
+          <div class="hobbies-list">
+            <span class="badge">Travel</span>
+            <span class="badge">Outdoor Activity</span>
+            <span class="badge">Online Gaming</span>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>References</h2>
+          <div class="references">
+            <div class="reference-card">
+              <h3>Dr. Anthony Ellertson</h3>
+              <p class="title">Director and Clinical Professor of GIMM</p>
+              <a href="mailto:anthonyellertson@boisestate.edu">anthonyellertson@boisestate.edu</a>
+              <a href="tel:715-252-3751">(715) 252-3751</a>
+            </div>
+
+            <div class="reference-card">
+              <h3>Jack Polifka</h3>
+              <p class="title">Clinical Assistant Professor</p>
+              <a href="mailto:jackpolifka@boisestate.edu">jackpolifka@boisestate.edu</a>
+              <a href="tel:224-545-3125">(224) 545-3125</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a class="btn secondary" href="CharlieBekendam_Resume_October_2025.pdf" download>
+            Download PDF Version
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year"></span> Charlie Bekendam. All rights reserved.</span>
+      <a href="#content" class="btn ghost">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
